@@ -2,7 +2,8 @@ import logging
 import sqlite3
 from pathlib import Path
 
-DB_PATH = Path("tweets.db")
+BASE_DIR = Path(__file__).resolve().parent.parent
+DB_PATH = BASE_DIR / "db" / "tweets.db"
 AFINN_FILE = Path("../data/AFINN-111.txt")
 TABLE_NAME = "tweets_normalized"
 

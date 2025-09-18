@@ -3,7 +3,8 @@ import logging
 import sqlite3
 from pathlib import Path
 
-DB_PATH = Path("tweets.db")
+BASE_DIR = Path(__file__).resolve().parent.parent
+DB_PATH = BASE_DIR / "db" / "tweets.db"
 TWEETS_FILE = Path("../data/three_minutes_tweets.json.txt")
 BATCH_SIZE = 1000
 
